@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add A Household Member</title>
 </head>
 <body>
-
+<h1>Add A Household Member</h1>
+<form method = "post" action ="/members/listMembers">
+   <p>
+   <label>Enter Name</label>
+       <input type = "text" name="name"></p>
+    <p><label>Enter Age</label>
+        <Input type = "text" name="age"></p>
+    <p><label>Select Gender:</label></p>
+    <label>Male</label>
+    <input type = "checkbox"id = "M" name ="M" value="Male">
+    <label>Female</label>
+    <input type = "checkbox" id="F" name="F" value="Female">
+    <p>
+        <input type = "submit" value="Submit"></p>
+</form>
 </body>
 </html>
