@@ -19,7 +19,7 @@ public class MemberController {
    /* }*/
     @RequestMapping(method={RequestMethod.GET, RequestMethod.POST}, value = "listMembers")
     public String displayAllMembers(@RequestParam(required = false) String name,
-                                    @RequestParam(required = false) int age, Model model){
+                                    @RequestParam(required = false, defaultValue = "0") int age, Model model){
        model.addAttribute("members", MemberData.getAll());
         MemberData.add(new Member(name, age));
         return"members/listMembers";
